@@ -109,6 +109,11 @@ form button{
 form button:hover{
   background: hsl(0, 80%, 86%);
 }
+@media screen and (max-width: 360px) {
+  .error-img{
+    transform: translate(850%,0%);
+  }
+}
 @media screen and (min-width: 500px) {
     .main{
         display: flex;
