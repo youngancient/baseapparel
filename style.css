@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+h1 {
+  font-size: 40px;
+  letter-spacing: 15px;
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+}
+#colored {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.desc {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: hsl(0, 36%, 70%);
+}
+
+main {
+  margin-top: 20px;
+}
+header {
+  margin-left: 20px;
+}
+.image {
+  margin-top: 20px;
+}
+.hero-mobile {
+  width: 100%;
+  height: 100%;
+}
+.sub-main {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.head,
+form {
+  margin-top: 10px;
+}
+.desktop-h,
+.hero-desktop {
+  display: none;
+}
+.bdr {
+  border: 1px solid black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+form div {
+  display: flex;
+}
+form input {
+  height: 30px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 25px;
+  outline: 0;
+  border: 2px solid hsl(0, 36%, 70%);
+  font-size: 16px;
+}
+form p {
+  margin-top: 10px;
+}
+form .message{
+  display: none;
+}
+.error{
+  color: hsl(0, 93%, 68%);
+}
+.success{
+  color:hsl(154, 59%, 51%);
+}
+form div{
+  position: relative;
+}
+.error-img{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  transform: translate(900%,0%);
+  display: none;
+}
+form button{
+  cursor: pointer;
+  background: hsl(0, 74%, 74%);
+  outline: 0;
+  border: 0;
+  width: 80px;
+  border-radius: 20px;
+  transform: translate(-45%,0%);
+  box-shadow: 4px 4px 10px 3px hsl(0, 70%, 85%);
+}
+form button:hover{
+  background: hsl(0, 80%, 86%);
+}
+@media screen and (min-width: 500px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .error-img{
+      transform: translate(900%,0%);
+    }
+}
+@media screen and (min-width: 768px) {
+  .error-img{
+    width: 40px;
+    height: 40px;
+    transform: translate(1200%,0%);
+  }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+      font-size: 45px;
+    }
+    .desc{
+      font-size: 30px;
+      line-height: 30px;
+    }
+    form{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form input{
+      width: 600px;
+      height: 60px;
+      font-size: 30px;
+      padding: 40px;
+    }
+    form button{
+      width: 150px;
+      border-radius: 40px;
+    }
+    .message{
+      font-size: 30px;
+    }
+}
+@media screen and (min-width: 992px) {
+  .error-img{
+    width: 20px;
+    height: 20px;
+    transform: translate(1500%,0%);
+  }
+  h1 {
+    font-size: 55px;
+    letter-spacing: 15px;
+    word-spacing: 15px;
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+  }
+  #colored {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+  }
+  main {
+    margin-top: 0;
+    /* height: 100vh; */
+    padding: 1px;
+  }
+  .sub-main {
+    background: url(./images/bg-pattern-desktop.svg) right;
+    margin-top: 0;
+    padding: 10px;
+    text-align: left;
+    display: block;
+  }
+  header,
+  .head {
+    margin-top: 30px;
+    margin-left: 100px;
+    padding: 20px;
+  }
+  .head{
+    padding: 5px;
+    padding-left: 15px;
+  }
+  p {
+    margin-top: 5px;
+  }
+  .desc {
+    margin-left: 100px;
+    padding: 15px;
+    width: 70%;
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .desktop-h,
+  .hero-desktop {
+    display: block;
+  }
+  .mobile-h,
+  .hero-mobile {
+    display: none;
+  }
+  .image {
+    grid-area: image;
+    margin-top: 0;
+  }
+  .image .hero-desktop {
+    height: 100vh;
+    width: 100%;
+  }
+  .submain {
+    grid-area: submain;
+  }
+  .main {
+    display: grid;
+    /* height: 100%; */
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-areas: "submain image";
+  }
+  form {
+    margin-left: 100px;
+    padding: 10px;
+    justify-content: left;
+    align-items:baseline;
+    width: auto;
+  }
+  form input {
+    width: 400px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 25px;
+    outline: 0;
+    border: 2px solid hsl(0, 36%, 70%,0.8);
+    font-size: 16px;
+  }
+  form p {
+    padding: 5px;
+    margin-left: 20px;
+  }
+  form button{
+  transform: translate(-40%,0%);
+  border-radius: 20px;
+  width: 80px;
+  }
+  form p {
+    margin-top: 10px;
+  }
+  form .message{
+    font-size: 16px;
+  }
+  
+}

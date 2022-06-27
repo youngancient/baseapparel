@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Base Apparel</title>
+  </head>
+  <body>
+    <main>
+      <header class="mobile-h">
+        <div>
+          <img src="./images/logo.svg" />
+        </div>
+      </header>
+      <div class="main">
+        <div class="image">
+          <img
+            src="./images/hero-mobile.jpg"
+            alt="hero-mobile"
+            class="hero-mobile"
+          />
+          <img
+            src="./images/hero-desktop.jpg"
+            alt="hero-desktop"
+            class="hero-desktop"
+          />
+        </div>
+        <div class="sub-main">
+          <header class="desktop-h">
+            <div>
+              <img src="./images/logo.svg" />
+            </div>
+          </header>
+          <div class="head">
+            <h1 id="colored">WE'RE</h1>
+            <h1>COMING <br>SOON</h1>
+          </div>
+          <p class="desc">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <form class="" novalidate>
+            <div class="">
+              <img src="./images/icon-error.svg" class="error-img">
+              <input type="email" required placeholder="Email Address" id="email"/>
+              <button><img src="./images/icon-arrow.svg"></button>
+            </div>
+            <p class="message error">Please provide a valid email</p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
