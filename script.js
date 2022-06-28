@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelector('form #email').onkeyup = function(){
         hide(".message");
         hide(".error-img");
+        document.querySelector("form input").style.border = " 2px solid hsl(0, 80%, 86%)";
     }
     document.querySelector('form').onsubmit = function(){
         let email = document.querySelector('form #email').value;
         if(email == ''){
             document.querySelector("form .message").innerHTML = "Email cannot be empty !";
             document.querySelector("form .message").style.color = 'hsl(0, 93%, 68%)';
+            document.querySelector("form input").style.border = " 2px solid hsl(0, 74%, 74%)";
             display(".message");
             display(".error-img");
 ;        }else{
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }else{
                 document.querySelector("form .message").innerHTML = "Enter a Valid Email !";
                 document.querySelector("form .message").style.color = 'hsl(0, 93%, 68%)';
+                document.querySelector("form input").style.border = " 2px solid hsl(0, 74%, 74%)";
                 display(".message");
                 display(".error-img");
             }
